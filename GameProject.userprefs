@@ -1,9 +1,12 @@
 ﻿<Properties StartupConfiguration="{C8B37DAE-2E79-4232-AD0E-A7F9D343BEC9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="GameProject/Controller/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameProject/View/ParallaxingBackground.cs">
     <Files>
-      <File FileName="GameProject/Controller/ShooterGame.cs" Line="86" Column="4" />
-      <File FileName="GameProject/Model/Player.cs" Line="73" Column="23" />
-      <File FileName="GameProject/Controller/Program.cs" Line="23" Column="18" />
+      <File FileName="GameProject/Controller/ShooterGame.cs" Line="436" Column="88" />
+      <File FileName="GameProject/Model/Player.cs" Line="7" Column="8" />
+      <File FileName="GameProject/Controller/Program.cs" Line="28" Column="1" />
+      <File FileName="GameProject/View/Animation.cs" Line="14" Column="7" />
+      <File FileName="GameProject/View/ParallaxingBackground.cs" Line="21" Column="1" />
+      <File FileName="GameProject/View/Projectile.cs" Line="49" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

@@ -41,6 +41,10 @@
     <Compile Include="Controller\ShooterGame.cs" />
     <Compile Include="Controller\Program.cs" />
     <Compile Include="Model\Player.cs" />
+    <Compile Include="View\Animation.cs" />
+    <Compile Include="View\ParallaxingBackground.cs" />
+    <Compile Include="Model\Enemy.cs" />
+    <Compile Include="View\Projectile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest" />

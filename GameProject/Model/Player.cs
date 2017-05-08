@@ -2,16 +2,18 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using GameProject.View;
+
 namespace GameProject.Model
 {
 	public class Player
 	{
 		// Animation representing the player
-		private Texture2D playerTexture;
-		public Texture2D PlayerTexture
+		private Animation playerAnimation;
+		public Animation PlayerAnimation
 		{
-			get { return playerTexture; }
-			set { playerTexture = value; }
+			get { return playerAnimation; }
+			set { playerAnimation = value; }
 		}
 
 		// Position of the Player relative to the upper left side of the screen
@@ -19,41 +21,42 @@ namespace GameProject.Model
 
 		// State of the player
 		private bool active;
-		public bool Active 
+		public bool Active
 		{
 			get { return active; }
-			set { active = value; } 
+			set { active = value; }
 		}
 
 		// Amount of hit points that player has
 		private int health;
-		public int Health 
+		public int Health
 		{
 			get { return health; }
-			set { health = value;}
+			set { health = value; }
 		}
 
 		// Get the width of the player ship
 		private int width;
 		public int Width
 		{
-			get { return PlayerTexture.Width; }
+			get { return PlayerAnimation.FrameWidth; }
 		}
 
 		// Get the height of the player ship
 		private int height;
 		public int Height
 		{
-			get { return PlayerTexture.Height; }
+			get { return PlayerAnimation.FrameHeight; }
 		}
 
 		public Player()
 		{
 		}
 
-		public void Initialize(Texture2D texture, Vector2 position)
+		// Initialize the player
+		public void Initialize(Animation animation, Vector2 position)
 		{
-			PlayerTexture = texture;
+			playerAnimation = animation;
 
 			// Set the starting position of the player around the middle of the screen and to the back
 			Position = position;
@@ -65,13 +68,18 @@ namespace GameProject.Model
 			Health = 100;
 		}
 
-		public void Update()
+		// Update the player animation
+		public void Update(GameTime gameTime)
 		{
+			playerAnimation.Position = Position;
+			playerAnimation.Update(gameTime);
 		}
 
+
+		// Draw the player
 		public void Draw(SpriteBatch spriteBatch)
 		{
-			spriteBatch.Draw(PlayerTexture, Position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+			playerAnimation.Draw(spriteBatch);
 		}
 	}
 }
